@@ -1,12 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <style>
+        body{
+            font-family:Arial, Helvetica, sans-serif
+        }
+       
+        textarea{
+            overflow-y: scroll;
+            overflow-x: scroll;
+            height: 120px;
+            width: 400px;
+        }
+
+        
+    </style>
 </head>
 <body>
-    
+    <header>
+        <h1 style="text-align:center;">Bienvenidos programadores</h1>
+    </header>
+    <section>
+        <h2>Cubre tus datos para unirte a nosotros</h2>
+        <form action="https://moodle.danielcastelao.org/daw/action_page.php" method="GET" enctype="text/plain">
+            <label for="nif">NIF:</label>
+            <input type="text" id="nif" name="nif" value=""><br><br>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" value="" size="25"><br><br>
+            <label for="apellido">Apellidos:</label>
+            <input type="text" id="apellido" name="apellido" value="" size="35"><br><br>
+            <label for="edad1">Edad:</label><br> 
+            <input type="radio" id="edad1" name="edad" value="15-19">15-19
+            <label for="edad2"></label><br> 
+            <input type="radio" id="edad2" name="edad" value="20-29"  checked="checked">20-29
+            <label for="edad3"></label><br>
+            <input type="radio" id="edad3" name="edad" value="30-40">30-40<br><br>
+            <label for="estado_civil">Estado civil:</label><br>
+            <!-- <input type="text" id="estado_civil" name="estado_civil" value=""><br><br> -->
+            <select multiple name="estado_civil" id="estado_civil">
+                <option>soltero</option>
+                <option>casado</option>
+                <option>divorciado</option>
+            </select><br><br>
+            <label for="aficion1">Aficiones:</label><br>
+            <input type="checkbox" id="aficion1" name="aficion1" value="Cine">Cine
+            <label for="aficion2"></label><br>
+            <input type="checkbox" id="aficion2" name="aficion2" value="Deportes"  checked="checked">Deportes
+            <label for="aficion3"></label><br>
+            <input type="checkbox" id="aficion3" name="aficion3" value="Lectura">Lectura
+            <label for="aficion4"></label><br>
+            <input type="checkbox" id="aficion4" name="aficion4" value="Senderismo">Senderismo<br><br>
+            <label for="comentario">Comentarios:</label><br>
+            <textarea id="comentario" name="comentario_usuario" value="comentario" placeholder="Escribe aquí tus comentarios"></textarea> 
+        </form>
+    </section>
 </body>
 </html>
